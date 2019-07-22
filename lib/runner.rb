@@ -1,11 +1,12 @@
 require_relative "blackjack.rb"
 
 def runner
+  # code runner here
   welcome
-  total = initial_round
-  until total > 21 do
-    total = hit?(total)
-    display_card_total(total)
+  hand=initial_round
+  until hand>21 do
+    hand=hit?(hand)
+    display_card_total(hand)
   end
-end_game(total)
+  end_game(hand)
 end
